@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <div v-bind:id="dynamicId"></div>
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
+
+    <script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        data: { 
+            message: 'Hello Vue!',
+            dynamicId: '112233',
+            isButtonDisabled: true
+         }
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foo.html</title>
+</head>
+<body>
+	<p>foo.html</p>
+	<script type="text/javascript">
+		var stateObj = { foo: "bar" };
+		history.pushState(stateObj, "page 2", "");
+		console.log("foo.html execute....");
+		window.onpopstate = function(event) {
+		  	console.log("onpopstate: " + document.location + ", state: " + JSON.stringify(event.state), event);
+		};
+	</script>
+</body>
+</html>

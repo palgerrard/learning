@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bar.html</title>
+</head>
+<body>
+	<p>bar.html</p>
+	<script type="text/javascript">
+		console.log("bar.html execute....");
+		window.onpopstate = function(event) {
+		  	console.log("onpopstate: " + document.location + ", state: " + JSON.stringify(event.state));
+		};
+	</script>
+</body>
+</html>

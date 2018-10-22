@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foo.html</title>
+</head>
+<body>
+	<p id="name">foo.html</p>
+	<button onclick="selectBank()">选择银行</button>
+	<script type="text/javascript">
+		console.log("index.html execute....");
+		let domName = document.getElementById("name")
+		window.onpopstate = function(event) {
+			console.log("history length", window.history.length);
+		  	console.log("onpopstate: " + document.location + ", state: " + JSON.stringify(event.state), event);
+		};
+		window.selectBank = function(){
+			domName.innerHTML = "选择银行页面";
+		}
+	</script>
+</body>
+</html>

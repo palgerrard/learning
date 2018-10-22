@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fish.html</title>
+</head>
+<body>
+	<p>fish.html</p>
+	<script type="text/javascript">
+		
+		let count = 0;
+		
+		var stateObj = { count: count++};
+		history.replaceState(stateObj, `nowCout${count}`, "");
+
+		window.onpopstate = function(event) {
+			
+			var stateObj = { count: count++};
+			history.replaceState(stateObj, `nowCout${count}`, "");
+		  	console.log("onpopstate: " + document.location + ", state: " + JSON.stringify(event.state));
+		};
+		console.log("fish execute...");
+	</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "doublezhang-firstnpm",
+  "version": "1.0.11",
+  "description": "doublezhang first npm package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "palgerrard@163.com",
+  "license": "ISC"
+}
